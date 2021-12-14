@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "extends": ["eslint:recommended", "react-app", "react-app/jest"],
+  "rules": {
+    "consistent-return": 2,
+    "no-else-return": 1,
+    "semi": [1, "always"],
+    "space-unary-ops": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off"
+  },
+  "settings": { "import/resolver": { "typescript": {} } }
+}

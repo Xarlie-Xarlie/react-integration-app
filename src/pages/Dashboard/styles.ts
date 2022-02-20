@@ -10,7 +10,13 @@ export const Title = styled.h1`
   margin-top: 80px;
 `;
 
-export const Form = styled.form`
+export const Error = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 8px;
+`;
+
+export const Form = styled.form.attrs((props: { hasError: boolean }) => props)`
   margin-top: 40px;
   max-width: 700px;
   display: flex;
@@ -21,6 +27,9 @@ export const Form = styled.form`
     height: 70px;
     border: 0;
     border-radius: 5px 0 0 5px;
+    border: 2px solid #fff;
+
+    border-color: ${props => (props.hasError ? '#c53030' : '#fff')};
 
     &::placeholder {
       color: #a8a8b3;
